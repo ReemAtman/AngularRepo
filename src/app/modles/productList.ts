@@ -1,0 +1,45 @@
+import { Iproduct } from './iproduct';
+export const productList:Iproduct []=[
+    {
+    id:1,
+    title:"Dress",
+    quantity:2,
+    price:145.6,
+    imag:"./../../assets/images/dr.PNG"
+    },
+    {
+        id:2,
+        title:"Shoes",
+        quantity:0,
+        price:155.0,
+        imag:"./../../assets/images/sh.PNG",
+        },
+        {
+            id:3,
+            title:"T-shirt",
+            quantity:1,
+            price:200.6,
+            imag:"./../../assets/images/tsh.PNG",
+            },
+            {
+                id:4,
+                title:"Dress",
+                quantity:2,
+                price:335.0,
+                imag:"./../../assets/images/dr2.PNG",
+                },
+                {
+                    id:5,
+                    title:"Handbag",
+                    quantity:1,
+                    price:385.0,
+                    imag:"./../../assets/images/hand.PNG",
+                    },
+                    {
+                        id:6,
+                        title:"Scarf",
+                        quantity:2,
+                        price:305.0,
+                        imag:"./../../assets/images/sca.PNG",
+                        }
+]

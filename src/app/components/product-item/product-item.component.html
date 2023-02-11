@@ -1,0 +1,38 @@
+<!-- <div class="products">
+<div class="product men">
+    <div class="image">
+        <img src="./../../../assets/images/img4.jpg" alt="product">
+    </div>
+    <div class="details">
+        <h5>Product Name</h5>
+        <p>$19.99</p>
+        <button>Add To Cart</button>
+    </div>
+</div>
+</div> -->
+<div class="card alert  p-2 m-3">
+    <div >
+        <img src="{{myProduct.imag}}" alt="product">
+    </div>
+    <div class="pt-4">
+    <h3>{{myProduct?.title}}</h3>
+    <div class="bg-ligh p-2 rounded">
+        <p class="lead">price:${{myProduct.price}}</p>
+        <p class="lead">
+            {{
+            myProduct.quantity == 0 
+            ?"This Product Not Avaliable!"
+            :myProduct.quantity == 1
+            ?"Only One Product Avaliable!"
+            :"Quantity:"+ myProduct.quantity
+            }}</p>
+        <button 
+        class="btn"
+        [ngClass]="{           
+            'bg-warning':myProduct.quantity !=0,
+            'bg-danger':myProduct.quantity ==0
+        }"
+        >{{myProduct.quantity == 0 ? "Solid out":"Buy Now!" }}</button>
+    </div>
+</div>
+</div>

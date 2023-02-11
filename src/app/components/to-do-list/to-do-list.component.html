@@ -1,0 +1,43 @@
+<div class="list-container">
+  <h1>To Do List</h1>
+
+  <div class="row" style="margin-bottom: 30px">
+    <div class="col-2"></div>
+    <div class="col-lg-5 col-sm-12 mt-10 mr-5">
+      <input
+        [(ngModel)]="task"
+        type="text"
+        class="form-control"
+        placeholder="Enter Task"
+      />
+    </div>
+    <div class="col-lg-2 col-sm-12 mb-10">
+      <button
+        class="btn btn-warning w-100 h-100 text-light"
+        (click)="addToList()"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+
+  <ul
+    class="list-group mb-0 container"
+    *ngFor="let todo of list; let i = index"
+  >
+    <li
+      style="background-color: #eff1f2"
+      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2"
+    >
+      <div class="d-flex align-items-center">
+        {{ todo }}
+      </div>
+      <a
+        (click)="removeList(i)"
+        style="cursor: pointer"
+        class="bg-danger px-2 rounded-1 text-decoration-none text-white"
+        >Delete</a
+      >
+    </li>
+  </ul>
+</div>

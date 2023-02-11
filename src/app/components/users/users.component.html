@@ -1,0 +1,26 @@
+<table class="table table-striped mt-5">
+  <thead>
+    <tr>
+
+      <th scope="col">ID</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Actions</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+      <td>
+        <a class="btn btn-info mx-1" routerLink="/usersDetails/{{user.id}}">View</a>
+        <a class="btn btn-warning mx-1" routerLink="/addUser/{{user.id}}">Update</a>
+        <button class="btn btn-danger" (click)="deleteUserHandler(user.id)">Delete</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<br><br><br>

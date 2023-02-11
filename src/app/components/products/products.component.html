@@ -1,0 +1,16 @@
+<div class="category" id="category">
+    <h2 class="title">Categories</h2>
+    <div class="types">
+        <button id="all"><span>All</span></button>
+        <button id="women"><span>Dresses</span></button>
+        <button id="men"><span>Shoes</span></button>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <app-product-item class="col-sm-6 col-md-3 col-lg-4" *ngFor="let product of products"
+                [myProduct]="product"></app-product-item>
+        </div>
+    </div>
+
+</div>
